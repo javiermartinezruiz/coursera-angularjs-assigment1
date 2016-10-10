@@ -1,10 +1,10 @@
 (function () {
   'use strict';
-  angular.module('Assigment1App',[]).
-  controller('Assignment1Controller', Assignment1Controller);
+  angular.module('LunchCheck',[]).
+  controller('LunchCheckController', LunchCheckController);
 
-  Assignment1Controller.$inject = ['$scope'];
-  function Assignment1Controller($scope){
+  LunchCheckController.$inject = ['$scope'];
+  function LunchCheckController($scope){
     $scope.lunch = "";
 
     $scope.checkIfTooMuch = function(){
@@ -15,8 +15,6 @@
 
         var items = split($scope.lunch);
         var size = items.length;
-
-        console.log(size);
 
         if(size <= 3){
           $scope.message = "Enjoy it!";
